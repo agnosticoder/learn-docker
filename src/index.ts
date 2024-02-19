@@ -14,7 +14,7 @@ export default app.use(
     trpcServer({ router: appRouter })
 );
 
-const server = serve({hostname: '0.0.0.0', port: process.env.PORT || 3001, fetch: app.fetch});
+const server = serve({port: process.env.PORT || 3001, fetch: app.fetch});
 
 console.log('Server running at', `http://localhost:${server.port}/trpc/hello`);
 
